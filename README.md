@@ -5,6 +5,7 @@ Codes for the predictive quantization and joint time frequency interpolation str
 * [Conference pre-print](./Manuscripts/conf_vs.pdf)
 * [Extended journal version pre-print](./Manuscripts/journal_vs.pdf)
 
+Running these codes require the package [py-itpp](https://github.com/vidits-kth/py-itpp) installed with `python-2.7`, alongside standard packages like `pdb, numpy, scipy, matplotlib`
 
 
 ## Code Description
