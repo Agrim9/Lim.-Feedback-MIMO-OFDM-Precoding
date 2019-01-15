@@ -47,14 +47,6 @@ class_obj=MIMO_TDL_Channel(Nt,Nr,c_spec,Ts,num_subcarriers)
 number_simulations=1000
 #---------------------------------------------------------------------------
 # Step 1: Random Initialization of Codebook
-ran_init=False
-if(ran_init):
-    orth_codebook=[np.matrix(rand_stiefel(Nt,Nr)) for i in range(cb_size)]
-    full_codebook=[np.matrix(unitary(Nt)) for i in range(cb_size)]
-else:
-    print("Initialised from pre existing codebooks")
-    orth_codebook=np.load('./Results/17_09_18/Codebooks/orth_cb_1000_20.npy')
-    full_codebook=np.load('./Results/17_09_18/Codebooks/full_cb_1000_20.npy')
 orthU_coll=[]
 fullU_coll=[]
 num_iters=10
@@ -118,18 +110,3 @@ for iter_index in range(num_iters):
 
 
 pdb.set_trace()
-
-# np.save('./Results/12_09_18/Interpolation_comparison/Vehicular, 3.5 1e-4/pUwb.npy',iU)
-# np.save('./Results/12_09_18/Interpolation_comparison/Vehicular, 3.5 1e-4/U_mats.npy',U_mats)
-# #np.save('./Results/12_09_18/Interpolation_comparison/Vehicular, 3.5 1e-4/qU_mats.npy',qU)
-# np.save('./Results/12_09_18/Interpolation_comparison/Vehicular, 3.5 1e-4/Q_error.npy',interp_norm_error)
-# #np.save('./Results/12_09_18/Interpolation_comparison/Vehicular, 3.5 1e-4/P_error.npy',quant_interp_norm_error)
-
-'''
-#-------------------------------------------------------------------------
-# Single hops
-time_dom_map=[np.arange(max(index-4,0),min(index+4,num_subcarriers))\
-              for index in range(num_subcarriers)]
-freq_dom_map=[np.arange(max(index-5,0),min(index+2,num_subcarriers))\
-              for index in range(num_subcarriers)]
-'''

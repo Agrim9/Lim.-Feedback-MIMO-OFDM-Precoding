@@ -60,5 +60,4 @@ for simulation_index in range(number_simulations):
         sigma_col.append(S)
 
 kmeans64=KMeans(n_clusters=cb_size).fit(sigma_col)
-#np.save('./Results/18_09_18/Codebooks/sigma_cb_2bits_10000.npy',kmeans64.cluster_centers_)
 pdb.set_trace()

@@ -71,7 +71,7 @@ vec_collection=[]
 count=0
 num_preds=10000
 noise=1
-qtCodebook=np.load('./Codebooks/Independent/orth_cb_1000_20.npy')
+qtCodebook=np.load('./Codebooks/Independent_qt/orth_cb_1000_20.npy')
 start_time=time.time()
 #---------------------------------------------------------------------------
 # Main simulation loop for the algorithm

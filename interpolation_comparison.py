@@ -52,9 +52,9 @@ gdBER_QPSK=np.zeros(Eb_N0_dB.shape[0])
 qgdBER_QPSK=np.zeros(Eb_N0_dB.shape[0])
 use_cb=True
 if(use_cb==True):
-    orth_cb=np.load('./Codebooks/Independent/orth_cb_1000_20.npy')
-    full_cb=np.load('./Codebooks/Independent/full_cb_1000_20.npy')
-    sigma_cb=np.load('./Codebooks/Independent/sigma_cb_2bits_10000.npy')
+    orth_cb=np.load('./Codebooks/Independent_qt/orth_cb_1000_20.npy')
+    full_cb=np.load('./Codebooks/Independent_qt/full_cb_1000_20.npy')
+    sigma_cb=np.load('./Codebooks/Independent_qt/sigma_cb_2bits_10000.npy')
 max_cap=2.09838799 #Find max_cap using max_cap.py
 #---------------------------------------------------------------------------
 # Main simulation loop for the algorithm 
