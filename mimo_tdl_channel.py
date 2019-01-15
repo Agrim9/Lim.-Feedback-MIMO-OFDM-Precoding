@@ -1,3 +1,6 @@
+# This python script contains codes for channel generation, lifting 
+# and precoder prediction
+
 from __future__ import division
 import itpp
 import numpy as np

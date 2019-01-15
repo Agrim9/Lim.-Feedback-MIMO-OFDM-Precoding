@@ -23,9 +23,13 @@ Codes for the predictive quantization and joint time frequency interpolation str
 
 * **Joint time-frequency interpolation and predictive quantization**: Now once we have the base codebook for tangent spaces and the independent codebooks for initialisation purposes, we can proceed ahead and generate the precoders corresponding to time based and hopping based schemes. Using the code [hop\_pred.py](./hop_pred.py), one generates precoders corresponding to 100 channel evolutions for 10 independent channel realizations (i.e. fill 10 independent 100*`num_subcarriers` time-frequency bins matrix with generated precoders), using both the time based and hopping based schemes. These precoders are stored as `.npy` files in [Precoders\_generated](./Precoders_generated) folder. The folder currently contains sample precoders generated for ITU Pedestrian-A Channel. Using [eval.py](./eval.py), you can get the qtisation error with time, achievable rate and BER results, viz. the figures 8,9 in the paper.
 
-* **Plotting code**: The code [plot\_res.py](./plot_res.py) contains the codes used to plot the results and save svg files corresponding to them. The file also contains the results obtained by us in raw data form as well. 
+### Helping Codes
 
-## Helping Codes
+* **Plotting code**: The python script [plot\_res.py](./plot_res.py) contains the codes used to plot the results and save svg files corresponding to them. The file also contains the results obtained by us in raw data form as well. 
+
+* **BER and Achievable Rate codes**: The python script [sumrate\_BER.py](./sumrate_BER.py) contains the codes used to obtain the BER and achievable rate
+
+* **MIMO TDL Channel**: The python script [mimo\_tdl\_channel.py](./mimo_tdl_channel.py) contains codes for channel generation, lifting and precoder prediction
 
 ---
 

@@ -1,3 +1,6 @@
+#The python script [sumrate\_BER.py](./sumrate_BER.py) 
+#contains the codes used to obtain the BER and achievable rate
+
 from __future__ import division
 import numpy as np
 import scipy.linalg as la
