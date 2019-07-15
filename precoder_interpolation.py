@@ -49,7 +49,7 @@ class Interpolator():
         interpolated_S_list=np.zeros((self.num_subcarriers, Nr),dtype=complex)
         for i in range(self.num_fb_points-1):
             thS_current=sigma_list[feedback_indices[i]]
-            thS_next=sigma_list[feedback_indices[i]]
+            thS_next=sigma_list[feedback_indices[i+1]]
             if(qtCodebook is not None):
                 S_current=qtCodebook[np.argmin([la.norm(thS_current-codeword) for codeword in qtCodebook])]
                 S_next=qtCodebook[np.argmin([la.norm(thS_next-codeword)\
@@ -153,7 +153,7 @@ class Interpolator():
 
     def convex_interpolation(self, S_current, S_next, num_indices_to_be_filled, last_fill_flag=False):
         t=np.linspace(0,1,num=num_indices_to_be_filled+1, endpoint=False)
-        interpolation_fn= lambda  t:t*S_current+(1-t)*S_next
+        interpolation_fn= lambda  t:(1-t)*S_current+t*S_next
         S_interpolate=list(map(interpolation_fn,t))
         if(last_fill_flag):
             S_interpolate.append(S_next)
